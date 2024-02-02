@@ -16,7 +16,7 @@ inThisBuild(List(
   organization := "org.typelevel",
   homepage := Some(url("http://www.squants.com/")),
   licenses := Seq("Apache 2.0" -> url("http://www.opensource.org/licenses/Apache-2.0")),
-  tlCiReleaseBranches := Seq("master"),
+  tlCiReleaseBranches := Seq("main"),
   developers := List(
     Developer(
       "garyKeorkunian",
