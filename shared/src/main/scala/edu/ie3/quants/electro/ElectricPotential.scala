@@ -25,8 +25,8 @@ final class ElectricPotential private (val value: Double, val unit: ElectricPote
 
   def dimension = ElectricPotential
 
-  protected[squants] def timeIntegrated = Webers(toVolts)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Webers(toVolts)
+  protected[quants] def time = Seconds(1)
 
   def *(that: ElectricCurrent): Power = Watts(toVolts * that.toAmperes)
   def *(that: Capacitance): ElectricCharge = Coulombs(toVolts * that.toFarads)

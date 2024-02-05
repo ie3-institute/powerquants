@@ -25,8 +25,8 @@ final class Yank private (val value: Double, val unit: YankUnit)
 
   def dimension = Yank
 
-  protected[squants] def timeIntegrated = Newtons(toNewtonsPerSecond)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Newtons(toNewtonsPerSecond)
+  protected[quants] def time = Seconds(1)
 
   def *(that: TimeSquared): Momentum = this * that.time1 * that.time2
 

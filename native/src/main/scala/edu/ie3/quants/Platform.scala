@@ -7,12 +7,9 @@ object Platform {
    * @param d Double number to be formatted
    * @return
    */
-  private[squants] def crossFormat(d: Double): String = {
-    if (d.toLong == d) {
-      "%.1f".format(d)
-    }
-    else {
-      d.toString
-    }
+  private[quants] def crossFormat(d: Double): String = {
+    // we cannot use the same logic as JS and JVM because string formatting is not supported
+    // by Scala Native yet
+    d.toString
   }
 }

@@ -25,7 +25,7 @@ final class LuminousExposure private (val value: Double, val unit: LuminousExpos
   def dimension = LuminousExposure
 
   protected def timeDerived = Lux(toLuxSeconds)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def time = Seconds(1)
 
   def toLuxSeconds = to(LuxSeconds)
 }

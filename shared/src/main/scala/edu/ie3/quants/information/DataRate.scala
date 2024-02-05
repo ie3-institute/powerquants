@@ -12,8 +12,8 @@ final class DataRate private (val value: Double, val unit: DataRateUnit)
   with TimeDerivative[Information] {
 
   def dimension = DataRate
-  protected[squants] def timeIntegrated = Bytes(toBytesPerSecond)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Bytes(toBytesPerSecond)
+  protected[quants] def time = Seconds(1)
 
   def toBytesPerSecond = to(BytesPerSecond)
   def toKilobytesPerSecond = to(KilobytesPerSecond)

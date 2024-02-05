@@ -24,8 +24,8 @@ final class PressureChange private (val value: Double, val unit: PressureChangeU
 
   def dimension = PressureChange
 
-  protected[squants] def timeIntegrated = Pascals(toPascalsPerSecond)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Pascals(toPascalsPerSecond)
+  protected[quants] def time = Seconds(1)
 
   def toPascalsPerSecond = to(PascalsPerSecond)
   def toBarsPerSecond = to(BarsPerSecond)

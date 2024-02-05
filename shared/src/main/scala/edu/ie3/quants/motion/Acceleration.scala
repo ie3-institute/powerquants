@@ -30,9 +30,9 @@ final class Acceleration private (val value: Double, val unit: AccelerationUnit)
 
   def dimension = Acceleration
 
-  protected[squants] def timeIntegrated = MetersPerSecond(toMetersPerSecondSquared)
-  protected[squants] def timeDerived = MetersPerSecondCubed(toMetersPerSecondSquared)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = MetersPerSecond(toMetersPerSecondSquared)
+  protected[quants] def timeDerived = MetersPerSecondCubed(toMetersPerSecondSquared)
+  protected[quants] def time = Seconds(1)
 
   def *(that: Mass): Force = Newtons(this.toMetersPerSecondSquared * that.toKilograms)
   def *(that: TimeSquared): Length = this * that.time1 * that.time2

@@ -8,6 +8,8 @@
 
 package edu.ie3.quants
 
+import edu.ie3.quants.space.AngleUnit
+
 /**
  * Root trait for representing Vectors
  *

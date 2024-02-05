@@ -27,8 +27,8 @@ final class ElectricCurrent private (val value: Double, val unit: ElectricCurren
 
   def dimension = ElectricCurrent
 
-  protected[squants] def timeIntegrated = Coulombs(toAmperes)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Coulombs(toAmperes)
+  protected[quants] def time = Seconds(1)
 
   def *(that: ElectricalResistance): ElectricPotential = Volts(this.toAmperes * that.toOhms)
   def *(that: ElectricPotential): Power = Watts(this.toAmperes * that.toVolts)

@@ -32,9 +32,9 @@ final class Power private (val value: Double, val unit: PowerUnit)
 
   def dimension = Power
 
-  protected[squants] def timeIntegrated = WattHours(toWatts)
+  protected[quants] def timeIntegrated = WattHours(toWatts)
   protected def timeDerived = WattsPerHour(toWatts)
-  protected[squants] def time = Hours(1)
+  protected[quants] def time = Hours(1)
 
   def /(that: Length): SpectralPower = WattsPerMeter(this.toWatts / that.toMeters)
   def /(that: SpectralPower): Length = Meters(this.toWatts / that.toWattsPerMeter)

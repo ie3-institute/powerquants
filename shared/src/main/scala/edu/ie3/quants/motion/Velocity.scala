@@ -31,8 +31,8 @@ final class Velocity private (val value: Double, val unit: VelocityUnit)
   def dimension = Velocity
 
   def timeDerived = MetersPerSecondSquared(toMetersPerSecond)
-  protected[squants] def timeIntegrated = Meters(toMetersPerSecond)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Meters(toMetersPerSecond)
+  protected[quants] def time = Seconds(1)
 
   def *(that: Mass): Momentum = NewtonSeconds(this.toMetersPerSecond * that.toKilograms)
 

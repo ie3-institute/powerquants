@@ -25,8 +25,8 @@ final class LuminousFlux private (val value: Double, val unit: LuminousFluxUnit)
 
   def dimension = LuminousFlux
 
-  protected[squants] def timeIntegrated = LumenSeconds(toLumens)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = LumenSeconds(toLumens)
+  protected[quants] def time = Seconds(1)
 
   def /(that: Area): Illuminance = Lux(this.toLumens / that.toSquareMeters)
   def /(that: Illuminance): Area = SquareMeters(this.toLumens / that.toLux)

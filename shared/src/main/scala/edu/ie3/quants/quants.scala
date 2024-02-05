@@ -1,5 +1,3 @@
-import edu.ie3.quants.time.Frequency
-
 /*                                                                      *\
 ** powerquants was derived from squants:                                **
 ** Scala Quantities and Units of Measure Library and DSL                **
@@ -7,6 +5,10 @@ import edu.ie3.quants.time.Frequency
 ** (c) 2013-2015, Gary Keorkunian                                       **
 ** (c) 2024, Sebastian Peter (ie3)                                      **
 \*                                                                      */
+
+package edu.ie3
+
+import edu.ie3.quants.time.Frequency
 
 /**
  * ==Squants==

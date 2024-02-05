@@ -24,7 +24,7 @@ final class LuminousEnergy private (val value: Double, val unit: LuminousEnergyU
   def dimension = LuminousEnergy
 
   protected def timeDerived = Lumens(toLumenSeconds)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def time = Seconds(1)
 
   def toLumenSeconds = to(LumenSeconds)
 }

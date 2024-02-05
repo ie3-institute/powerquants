@@ -28,8 +28,8 @@ final class Frequency private (val value: Double, val unit: FrequencyUnit)
 
   def dimension = Frequency
 
-  protected[squants] def timeIntegrated = Each(toHertz)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Each(toHertz)
+  protected[quants] def time = Seconds(1)
 
   def *(that: Acceleration): Jerk = that * this
   def *(that: Angle): AngularVelocity = that * this

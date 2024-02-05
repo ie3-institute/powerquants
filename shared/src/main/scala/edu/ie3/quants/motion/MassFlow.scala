@@ -25,8 +25,8 @@ final class MassFlow private (val value: Double, val unit: MassFlowUnit)
 
   def dimension = MassFlow
 
-  protected[squants] def timeIntegrated = Kilograms(toKilogramsPerSecond)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = Kilograms(toKilogramsPerSecond)
+  protected[quants] def time = Seconds(1)
 
   def toKilogramsPerSecond = to(KilogramsPerSecond)
   def toPoundsPerSecond = to(PoundsPerSecond)

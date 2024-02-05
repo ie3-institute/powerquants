@@ -27,7 +27,7 @@ final class Force private (val value: Double, val unit: ForceUnit)
 
   def dimension = Force
 
-  protected[squants] def timeIntegrated = NewtonSeconds(toNewtons)
+  protected[quants] def timeIntegrated = NewtonSeconds(toNewtons)
   protected def timeDerived = NewtonsPerSecond(toNewtons)
   override def time = Seconds(1)
 

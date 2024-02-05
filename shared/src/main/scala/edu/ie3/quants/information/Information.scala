@@ -26,7 +26,7 @@ final class Information private (val value: Double, val unit: InformationUnit)
   def dimension = Information
 
   protected def timeDerived = BytesPerSecond(toBytes)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def time = Seconds(1)
 
   def toBytes = to(Bytes)
   def toKilobytes = to(Kilobytes)

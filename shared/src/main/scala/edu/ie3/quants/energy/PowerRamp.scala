@@ -27,8 +27,8 @@ final class PowerRamp private (val value: Double, val unit: PowerRampUnit)
 
   def dimension = PowerRamp
 
-  protected[squants] def timeIntegrated = Watts(toWattsPerHour)
-  protected[squants] def time = Hours(1)
+  protected[quants] def timeIntegrated = Watts(toWattsPerHour)
+  protected[quants] def time = Hours(1)
 
   def *(that: TimeSquared): Energy = this * that.time1 * that.time2
 

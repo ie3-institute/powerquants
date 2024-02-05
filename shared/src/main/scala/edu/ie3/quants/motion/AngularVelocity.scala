@@ -39,11 +39,11 @@ final class AngularVelocity private (val value: Double, val unit: AngularVelocit
    */
   def onRadius(radius: Length): Velocity = toRadiansPerSecond * radius / Seconds(1)
 
-  protected[squants] def timeIntegrated: Angle = Radians(toRadiansPerSecond)
+  protected[quants] def timeIntegrated: Angle = Radians(toRadiansPerSecond)
 
-  protected[squants] def timeDerived: AngularAcceleration = RadiansPerSecondSquared(toRadiansPerSecond)
+  protected[quants] def timeDerived: AngularAcceleration = RadiansPerSecondSquared(toRadiansPerSecond)
 
-  protected[squants] def time: Time = Seconds(1)
+  protected[quants] def time: Time = Seconds(1)
 }
 
 object AngularVelocity extends Dimension[AngularVelocity] {

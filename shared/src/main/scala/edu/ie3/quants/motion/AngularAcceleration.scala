@@ -37,9 +37,9 @@ final class AngularAcceleration private (val value: Double, val unit: AngularAcc
     NewtonMeters(this.toRadiansPerSecondSquared * that.toKilogramsMetersSquared)
   }
 
-  override protected[squants] def timeIntegrated: AngularVelocity = RadiansPerSecond(toRadiansPerSecondSquared)
+  override protected[quants] def timeIntegrated: AngularVelocity = RadiansPerSecond(toRadiansPerSecondSquared)
 
-  override protected[squants] def time: Time = Seconds(1)
+  override protected[quants] def time: Time = Seconds(1)
 }
 
 object AngularAcceleration extends Dimension[AngularAcceleration] {

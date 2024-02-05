@@ -1,4 +1,14 @@
+/*                                                                      *\
+** powerquants was derived from squants:                                **
+** Scala Quantities and Units of Measure Library and DSL                **
+**                                                                      **
+** (c) 2013-2015, Gary Keorkunian                                       **
+** (c) 2024, Sebastian Peter (ie3)                                      **
+\*                                                                      */
+
 package edu.ie3.quants
+
+import edu.ie3.quants.time.{Frequency, Hertz, TimeIntegral}
 
 /**
  * Represents a quantity of some thing for which there is no dimension.
@@ -18,7 +28,7 @@ final class Dimensionless private (val value: Double, val unit: DimensionlessUni
 
   protected def timeDerived = Hertz(toEach)
 
-  protected[squants] def time = Seconds(1)
+  protected[quants] def time = Seconds(1)
 
   def *(that: Dimensionless) = Each(toEach * that.toEach)
 
@@ -52,4 +62,110 @@ object Dimensionless extends Dimension[Dimensionless] {
   def siUnit = Each
 
   def units = Set(Each, Percent, Dozen, Score, Gross)
+}
+
+/**
+ * Base trait for units of [[squants.Dimensionless]]
+ *
+ * The DimensionlessUnit is a useful paradox
+ */
+trait DimensionlessUnit extends UnitOfMeasure[Dimensionless] with UnitConverter {
+  def apply[A](n: A)(implicit num: Numeric[A]) = Dimensionless(n, this)
+}
+
+/**
+ * Represents a unit of singles
+ */
+object Each extends DimensionlessUnit with PrimaryUnit with SiUnit {
+  val symbol = "ea"
+}
+
+/**
+ * Represents a number of hundredths (0.01)
+ */
+object Percent extends DimensionlessUnit {
+  val conversionFactor = 1e-2
+  val symbol = "%"
+}
+
+/**
+ * Represents a unit of dozen (12)
+ */
+object Dozen extends DimensionlessUnit {
+  val conversionFactor = 12d
+  val symbol = "dz"
+}
+
+/**
+ * Represents a unit of scores (20)
+ */
+object Score extends DimensionlessUnit {
+  val conversionFactor = 20d
+  val symbol = "score"
+}
+
+/**
+ * Represents a unit of gross (144)
+ */
+object Gross extends DimensionlessUnit {
+  val conversionFactor = 144d
+  val symbol = "gr"
+}
+
+object DimensionlessConversions {
+  lazy val percent = Percent(1)
+  lazy val each = Each(1)
+  lazy val dozen = Dozen(1)
+  lazy val score = Score(1)
+  lazy val gross = Gross(1)
+  lazy val hundred = Each(1e2)
+  lazy val thousand = Each(1e3)
+  lazy val million = Each(1e6)
+
+  import scala.language.implicitConversions
+
+  implicit class DimensionlessConversions[A](n: A)(implicit num: Numeric[A]) {
+    def percent = Percent(n)
+
+    def each = Each(n)
+
+    def ea = Each(n)
+
+    def dozen = Dozen(n)
+
+    def dz = Dozen(n)
+
+    def score = Score(n)
+
+    def gross = Gross(n)
+
+    def gr = Gross(n)
+
+    def hundred = Each(num.toDouble(n) * 1e2)
+
+    def thousand = Each(num.toDouble(n) * 1e3)
+
+    def million = Each(num.toDouble(n) * 1e6)
+  }
+
+  /**
+   * Provides an implicit conversion from Dimensionless to Double, allowing a Dimensionless value
+   * to be used anywhere a Double (or similar primitive) is required
+   *
+   * @param d Dimensionless
+   * @return
+   */
+  implicit def dimensionlessToDouble(d: Dimensionless): Double = d.toEach
+
+  implicit object DimensionlessNumeric extends AbstractQuantityNumeric[Dimensionless](Dimensionless.primaryUnit) {
+    /**
+     * Dimensionless quantities support the times operation.
+     * This method overrides the default [[squants.AbstractQuantityNumeric.times]] which throws an exception
+     *
+     * @param x Dimensionless
+     * @param y Dimensionless
+     * @return
+     */
+    override def times(x: Dimensionless, y: Dimensionless) = x * y
+  }
 }

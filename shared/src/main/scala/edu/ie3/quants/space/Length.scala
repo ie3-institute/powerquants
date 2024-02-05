@@ -32,7 +32,7 @@ final class Length private (val value: Double, val unit: LengthUnit)
   def dimension = Length
 
   protected def timeDerived = MetersPerSecond(toMeters)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def time = Seconds(1)
 
   def *(that: Length): Area = unit match {
     case Centimeters ⇒ SquareCentimeters(this.value * that.toCentimeters)

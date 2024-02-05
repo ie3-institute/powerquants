@@ -1,3 +1,11 @@
+/*                                                                      *\
+** powerquants was derived from squants:                                **
+** Scala Quantities and Units of Measure Library and DSL                **
+**                                                                      **
+** (c) 2013-2015, Gary Keorkunian                                       **
+** (c) 2024, Sebastian Peter (ie3)                                      **
+\*                                                                      */
+
 package edu.ie3.quants
 
 /**
@@ -16,4 +24,9 @@ trait Ratio[A <: Quantity[A], B <: Quantity[B]] {
   def convertToBase(q: B): A = base * (q / counter)
 
   def convertToCounter(q: A): B = counter * (q / base)
+}
+
+trait LikeRatio[A <: Quantity[A]] extends Ratio[A, A] {
+  def ratio = base / counter
+  def inverseRatio = counter / base
 }

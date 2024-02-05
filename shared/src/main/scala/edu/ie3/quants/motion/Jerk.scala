@@ -28,8 +28,8 @@ final class Jerk private (val value: Double, val unit: JerkUnit)
 
   def dimension = Jerk
 
-  protected[squants] def timeIntegrated = MetersPerSecondSquared(toMetersPerSecondCubed)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = MetersPerSecondSquared(toMetersPerSecondCubed)
+  protected[quants] def time = Seconds(1)
 
   def *(that: TimeSquared): Velocity = this * that.time1 * that.time2
 

@@ -17,7 +17,7 @@ import edu.ie3.quants.time.{ Time, TimeIntegral }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.Coulombs]]
+ * @param value value in [[edu.ie3.quants.electro.Coulombs]]
  */
 final class ElectricCharge private (val value: Double, val unit: ElectricChargeUnit)
   extends Quantity[ElectricCharge]

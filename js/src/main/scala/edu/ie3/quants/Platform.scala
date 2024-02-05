@@ -7,7 +7,7 @@ object Platform {
    * @param d Double number to be formatted
    * @return
    */
-  private[squants] def crossFormat(d: Double): String = {
+  private[quants] def crossFormat(d: Double): String = {
     if (d.toLong == d) {
       "%.1f".format(d)
     }

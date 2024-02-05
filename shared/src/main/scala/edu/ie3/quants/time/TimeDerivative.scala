@@ -19,8 +19,8 @@ import edu.ie3.quants._
  * @tparam A The type of quantity changing
  */
 trait TimeDerivative[A <: Quantity[A] with TimeIntegral[_]] {
-  protected[squants] def timeIntegrated: A
-  protected[squants] def time: Time
+  protected[quants] def timeIntegrated: A
+  protected[quants] def time: Time
 
   /**
    * Returns the amount of change in the integral that will happen over the given Time
@@ -40,7 +40,7 @@ trait TimeDerivative[A <: Quantity[A] with TimeIntegral[_]] {
 }
 
 trait SecondTimeDerivative[A <: SecondTimeIntegral[_]] { self: TimeDerivative[_] ⇒
-  protected[squants] def time: Time
+  protected[quants] def time: Time
   def *(that: TimeSquared): A
 }
 

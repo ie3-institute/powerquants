@@ -30,7 +30,7 @@ final class Volume private (val value: Double, val unit: VolumeUnit)
   def dimension = Volume
 
   protected def timeDerived = CubicMetersPerSecond(toCubicMeters)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def time = Seconds(1)
 
   def *(that: Density): Mass = Kilograms(this.toCubicMeters * that.toKilogramsPerCubicMeter)
   def *(that: EnergyDensity): Energy = Joules(this.toCubicMeters * that.toJoulesPerCubicMeter)

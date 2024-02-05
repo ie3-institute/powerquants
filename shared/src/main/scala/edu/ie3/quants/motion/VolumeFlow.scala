@@ -25,8 +25,8 @@ final class VolumeFlow private (val value: Double, val unit: VolumeFlowRateUnit)
 
   def dimension = VolumeFlow
 
-  protected[squants] def timeIntegrated = CubicMeters(toCubicMetersPerSecond)
-  protected[squants] def time = Seconds(1)
+  protected[quants] def timeIntegrated = CubicMeters(toCubicMetersPerSecond)
+  protected[quants] def time = Seconds(1)
 
   def toCubicMetersPerSecond = to(CubicMetersPerSecond)
   def toLitresPerDay = to(LitresPerDay)
