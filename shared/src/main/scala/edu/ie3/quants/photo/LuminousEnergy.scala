@@ -15,7 +15,7 @@ import edu.ie3.quants.time.{ Seconds, TimeIntegral }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.photo.LumenSeconds]]
+ * @param value value in [[edu.ie3.quants.photo.LumenSeconds]]
  */
 final class LuminousEnergy private (val value: Double, val unit: LuminousEnergyUnit)
   extends Quantity[LuminousEnergy]

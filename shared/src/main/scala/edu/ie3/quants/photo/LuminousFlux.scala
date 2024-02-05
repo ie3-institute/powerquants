@@ -17,7 +17,7 @@ import edu.ie3.quants.time.{ Seconds, TimeDerivative }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.photo.Lumens]]
+ * @param value value in [[edu.ie3.quants.photo.Lumens]]
  */
 final class LuminousFlux private (val value: Double, val unit: LuminousFluxUnit)
   extends Quantity[LuminousFlux]

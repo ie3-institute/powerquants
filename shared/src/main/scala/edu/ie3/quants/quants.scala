@@ -31,7 +31,7 @@ package object quants {
 
   type QuantitySeries[A <: Quantity[A]] = IndexedSeq[QuantityRange[A]]
 
-  /* Quantity Types brought into scope with just squants._ */
+  /* Quantity Types brought into scope with just edu.ie3.quants._ */
 
   /* SI Base Quantities and their Base Units */
   type Length = edu.ie3.quants.space.Length

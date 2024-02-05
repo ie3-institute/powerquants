@@ -22,7 +22,7 @@ import scala.language.implicitConversions
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.time.Milliseconds]]
+ * @param value value in [[edu.ie3.quants.time.Milliseconds]]
  */
 final class Time private (val value: Double, val unit: TimeUnit)
   extends Quantity[Time] {

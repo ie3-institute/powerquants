@@ -15,7 +15,7 @@ import edu.ie3.quants._
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value in [[squants.mass.Moles]]
+ * @param value in [[edu.ie3.quants.mass.Moles]]
  */
 final class ChemicalAmount private (val value: Double, val unit: ChemicalAmountUnit)
   extends Quantity[ChemicalAmount] {

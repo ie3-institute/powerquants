@@ -32,7 +32,7 @@ final class AreaTime private (val value: Double, val unit: AreaTimeUnit)
 }
 
 /**
- * Factory singleton for [[squants.radio.AreaTime]] values
+ * Factory singleton for [[edu.ie3.quants.radio.AreaTime]] values
  */
 object AreaTime extends Dimension[AreaTime] {
   private[radio] def apply[A](n: A, unit: AreaTimeUnit)(

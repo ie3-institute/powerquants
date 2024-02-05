@@ -22,7 +22,7 @@ import edu.ie3.quants.time.{ SecondTimeIntegral, TimeIntegral, TimeSquared }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in  [[squants.space.Meters]]
+ * @param value value in  [[edu.ie3.quants.space.Meters]]
  */
 final class Length private (val value: Double, val unit: LengthUnit)
   extends Quantity[Length]

@@ -32,7 +32,7 @@ final class AreaDensity private (val value: Double, val unit: AreaDensityUnit)
 }
 
 /**
- * Factory singleton for [[squants.mass.AreaDensity]] values
+ * Factory singleton for [[edu.ie3.quants.mass.AreaDensity]] values
  */
 object AreaDensity extends Dimension[AreaDensity] {
   private[mass] def apply[A](n: A, unit: AreaDensityUnit)(implicit num: Numeric[A]) = new AreaDensity(num.toDouble(n), unit)

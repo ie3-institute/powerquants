@@ -15,7 +15,7 @@ import edu.ie3.quants.time.TimeDerivative
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.photo.Lux]]
+ * @param value value in [[edu.ie3.quants.photo.Lux]]
  */
 final class Illuminance private (val value: Double, val unit: IlluminanceUnit)
   extends Quantity[Illuminance]

@@ -48,7 +48,7 @@ final class Dimensionless private (val value: Double, val unit: DimensionlessUni
 }
 
 /**
- * Factory singleton for [[squants.Dimensionless]]
+ * Factory singleton for [[edu.ie3.quants.Dimensionless]]
  */
 object Dimensionless extends Dimension[Dimensionless] {
   def apply[A](n: A, unit: DimensionlessUnit)(implicit num: Numeric[A]) = new Dimensionless(num.toDouble(n), unit)
@@ -65,7 +65,7 @@ object Dimensionless extends Dimension[Dimensionless] {
 }
 
 /**
- * Base trait for units of [[squants.Dimensionless]]
+ * Base trait for units of [[edu.ie3.quants.Dimensionless]]
  *
  * The DimensionlessUnit is a useful paradox
  */
@@ -160,7 +160,7 @@ object DimensionlessConversions {
   implicit object DimensionlessNumeric extends AbstractQuantityNumeric[Dimensionless](Dimensionless.primaryUnit) {
     /**
      * Dimensionless quantities support the times operation.
-     * This method overrides the default [[squants.AbstractQuantityNumeric.times]] which throws an exception
+     * This method overrides the default [[edu.ie3.quants.AbstractQuantityNumeric.times]] which throws an exception
      *
      * @param x Dimensionless
      * @param y Dimensionless

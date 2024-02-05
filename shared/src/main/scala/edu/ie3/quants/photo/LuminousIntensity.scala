@@ -15,7 +15,7 @@ import edu.ie3.quants.space.{ SolidAngle, SquareMeters }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.photo.Candelas]]
+ * @param value value in [[edu.ie3.quants.photo.Candelas]]
  */
 final class LuminousIntensity private (val value: Double, val unit: LuminousIntensityUnit)
   extends Quantity[LuminousIntensity] {

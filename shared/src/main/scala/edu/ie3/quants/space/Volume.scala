@@ -21,7 +21,7 @@ import edu.ie3.quants.time.TimeIntegral
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.space.CubicMeters]]
+ * @param value value in [[edu.ie3.quants.space.CubicMeters]]
  */
 final class Volume private (val value: Double, val unit: VolumeUnit)
   extends Quantity[Volume]

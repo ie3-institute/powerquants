@@ -21,7 +21,7 @@ import edu.ie3.quants.{ Acceleration, Velocity, Energy ⇒ _, _ }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value the value in the [[squants.mass.Grams]]
+ * @param value the value in the [[edu.ie3.quants.mass.Grams]]
  */
 final class Mass private (val value: Double, val unit: MassUnit)
   extends Quantity[Mass]
@@ -79,7 +79,7 @@ final class Mass private (val value: Double, val unit: MassUnit)
 }
 
 /**
- * Factory singleton for [[squants.mass.Mass]] values
+ * Factory singleton for [[edu.ie3.quants.mass.Mass]] values
  */
 object Mass extends Dimension[Mass] with BaseDimension {
   private[mass] def apply[A](n: A, unit: MassUnit)(implicit num: Numeric[A]) = new Mass(num.toDouble(n), unit)
@@ -95,7 +95,7 @@ object Mass extends Dimension[Mass] with BaseDimension {
 }
 
 /**
- * Base trait for units of [[squants.mass.Mass]]
+ * Base trait for units of [[edu.ie3.quants.mass.Mass]]
  */
 trait MassUnit extends UnitOfMeasure[Mass] with UnitConverter {
   def apply[A](n: A)(implicit num: Numeric[A]) = Mass(n, this)
@@ -236,7 +236,7 @@ object ExaElectronVoltMass extends MassUnit {
   val symbol = "EeV/c²"
 }
 /**
- * Implicit conversions for [[squants.mass.Mass]]
+ * Implicit conversions for [[edu.ie3.quants.mass.Mass]]
  *
  * Provides support fot the DSL
  */
