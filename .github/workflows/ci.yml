@@ -109,7 +109,7 @@ jobs:
   publish:
     name: Publish Artifacts
     needs: [build]
-    if: false && github.event_name != 'pull_request' && (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main') # disable for now
+    if: github.event_name != 'pull_request' && (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main')
     strategy:
       matrix:
         os: [ubuntu-latest]
