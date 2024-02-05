@@ -17,7 +17,7 @@ import edu.ie3.quants._
  * @author  Nicolas Vinuesa
  * @since   1.4
  *
- * @param value value in [[squants.energy.WattsPerCubicMeter]]
+ * @param value value in [[edu.ie3.quants.energy.WattsPerCubicMeter]]
  */
 final class PowerDensity private (val value: Double, val unit: PowerDensityUnit)
   extends Quantity[PowerDensity] {

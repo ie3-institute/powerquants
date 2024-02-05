@@ -18,7 +18,7 @@ import edu.ie3.quants.space.CubicMeters
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.energy.WattHours]]
+ * @param value value in [[edu.ie3.quants.energy.WattHours]]
  */
 final class EnergyDensity private (val value: Double, val unit: EnergyDensityUnit)
   extends Quantity[EnergyDensity] {

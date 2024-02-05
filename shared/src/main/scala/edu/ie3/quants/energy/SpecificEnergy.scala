@@ -15,7 +15,7 @@ import edu.ie3.quants._
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.energy.Grays]]
+ * @param value value in [[edu.ie3.quants.energy.Grays]]
  */
 final class SpecificEnergy private (val value: Double, val unit: SpecificEnergyUnit) extends Quantity[SpecificEnergy] {
 

@@ -13,11 +13,11 @@ package edu.ie3.quants
  *
  * Market Types are similar but not quite the same as other quantities in the library.
  *
- * The primary type, [[squants.market.Money]], is derived from Quantity, and its Units of Measure are Currencies.
+ * The primary type, [[edu.ie3.quants.market.Money]], is derived from Quantity, and its Units of Measure are Currencies.
  * However, because the conversion multipliers between units can not be predefined, many of the behaviors have been
  * overridden and augmented to realize correct behavior.
  *
- * [[squants.market.Price]]s represent a Ratio between Money and some other Quantity.  Prices can be created from
+ * [[edu.ie3.quants.market.Price]]s represent a Ratio between Money and some other Quantity.  Prices can be created from
  * ratios of Money and a Quantity
  * {{{
  *   val money: Money = USD(10)
@@ -34,10 +34,10 @@ package edu.ie3.quants
  *   val quote: Length = price * budget
  * }}}
  *
- * [[squants.market.CurrencyExchangeRate]]s represent conversion rates between currencies.
+ * [[edu.ie3.quants.market.CurrencyExchangeRate]]s represent conversion rates between currencies.
  * Use them to explicitly convert Money values in one currency to values in another.
  *
- * [[squants.market.MoneyContext]] provide the implicit context necessary to perform cross-currency operations
+ * [[edu.ie3.quants.market.MoneyContext]] provide the implicit context necessary to perform cross-currency operations
  * on Money values with conversions automatically applied.
  *
  * Some binary math operations will work on Moneys of like Currency with no MoneyContext in scope.

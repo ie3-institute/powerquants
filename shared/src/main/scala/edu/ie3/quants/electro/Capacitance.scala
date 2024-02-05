@@ -15,7 +15,7 @@ import edu.ie3.quants._
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.Farads]]
+ * @param value value in [[edu.ie3.quants.electro.Farads]]
  */
 final class Capacitance private (val value: Double, val unit: CapacitanceUnit)
   extends Quantity[Capacitance] {

@@ -17,7 +17,7 @@ import edu.ie3.quants.time.TimeIntegral
  *
  * @author Derek Morr
  * @since 0.6.0
- * @param value value in [[squants.information.Bytes]]
+ * @param value value in [[edu.ie3.quants.information.Bytes]]
  */
 final class Information private (val value: Double, val unit: InformationUnit)
   extends Quantity[Information]

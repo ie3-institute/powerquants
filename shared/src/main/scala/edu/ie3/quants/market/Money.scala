@@ -148,7 +148,7 @@ final class Money private (val amount: BigDecimal)(val currency: Currency)
   override def *(that: Double): Money = times(that)
 
   /**
-   * Multiplies this money by that [[squants.market.CurrencyExchangeRate]] and returns the equal value in the other currency.
+   * Multiplies this money by that [[edu.ie3.quants.market.CurrencyExchangeRate]] and returns the equal value in the other currency.
    *
    * Delegates to CurrencyExchangeRate * Money
    *
@@ -329,7 +329,7 @@ final class Money private (val amount: BigDecimal)(val currency: Currency)
   def <=#(that: Money)(implicit moneyContext: MoneyContext) = moneyCompare(that) <= 0
 
   /**
-   * Combines with that Money to create an [[squants.market.CurrencyExchangeRate]]
+   * Combines with that Money to create an [[edu.ie3.quants.market.CurrencyExchangeRate]]
    *
    * Exchange Rates on the same currency are not supported
    *

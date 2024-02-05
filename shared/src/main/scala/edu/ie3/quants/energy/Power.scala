@@ -18,12 +18,12 @@ import edu.ie3.quants.time.{ Hours, TimeDerivative, TimeIntegral }
 /**
  * Represents a quantity of power / load, the rate at which energy produced or used
  *
- * The first time derivative of [[squants.energy.Energy]]
+ * The first time derivative of [[edu.ie3.quants.energy.Energy]]
  *
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.energy.Watts]]
+ * @param value value in [[edu.ie3.quants.energy.Watts]]
  */
 final class Power private (val value: Double, val unit: PowerUnit)
   extends Quantity[Power]
@@ -57,7 +57,7 @@ final class Power private (val value: Double, val unit: PowerUnit)
 }
 
 /**
- * Companion object for [[squants.energy.Power]]
+ * Companion object for [[edu.ie3.quants.energy.Power]]
  */
 object Power extends Dimension[Power] {
   private[energy] def apply[A](n: A, unit: PowerUnit)(implicit num: Numeric[A]) = new Power(num.toDouble(n), unit)

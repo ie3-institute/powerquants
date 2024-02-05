@@ -71,7 +71,7 @@ object Acceleration extends Dimension[Acceleration] {
 }
 
 /**
- * Base trait for units of [[squants.motion.Acceleration]]
+ * Base trait for units of [[edu.ie3.quants.motion.Acceleration]]
  *
  * @author  garyKeorkunian
  * @since   0.1

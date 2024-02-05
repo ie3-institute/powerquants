@@ -166,7 +166,7 @@ object Temperature extends Dimension[Temperature] with BaseDimension {
 }
 
 /**
- * Base trait for units of [[squants.thermal.Temperature]]
+ * Base trait for units of [[edu.ie3.quants.thermal.Temperature]]
  */
 sealed trait TemperatureScale extends UnitOfMeasure[Temperature] {
   def self: TemperatureScale

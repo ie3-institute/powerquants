@@ -17,7 +17,7 @@ import edu.ie3.quants.time.{ Seconds, TimeDerivative }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.Volts]]
+ * @param value value in [[edu.ie3.quants.electro.Volts]]
  */
 final class ElectricPotential private (val value: Double, val unit: ElectricPotentialUnit)
   extends Quantity[ElectricPotential]

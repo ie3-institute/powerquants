@@ -14,8 +14,8 @@ import edu.ie3.quants._
 /**
  * Represents a price
  *
- * A price is an [[squants.Ratio]] between a quantity of [[squants.market.Money]]
- * and some other [[squants.Quantity]]
+ * A price is an [[edu.ie3.quants.Ratio]] between a quantity of [[edu.ie3.quants.market.Money]]
+ * and some other [[edu.ie3.quants.Quantity]]
  *
  * @author  garyKeorkunian
  * @since   0.1

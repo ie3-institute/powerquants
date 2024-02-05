@@ -13,12 +13,12 @@ import edu.ie3.quants.{ Time, _ }
 import edu.ie3.quants.time._
 
 /**
- * Represents the rate of change of [[squants.energy.Power]] over time
+ * Represents the rate of change of [[edu.ie3.quants.energy.Power]] over time
  *
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.energy.WattsPerHour]]
+ * @param value value in [[edu.ie3.quants.energy.WattsPerHour]]
  */
 final class PowerRamp private (val value: Double, val unit: PowerRampUnit)
   extends Quantity[PowerRamp]

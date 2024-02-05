@@ -17,7 +17,7 @@ import edu.ie3.quants.time.{ Time, TimeIntegral }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.space.Radians]]
+ * @param value value in [[edu.ie3.quants.space.Radians]]
  */
 final class Angle private (val value: Double, val unit: AngleUnit)
   extends Quantity[Angle] with TimeIntegral[AngularVelocity] {

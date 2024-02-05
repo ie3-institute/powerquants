@@ -15,7 +15,7 @@ import edu.ie3.quants._
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.Siemens]]
+ * @param value value in [[edu.ie3.quants.electro.Siemens]]
  */
 final class ElectricalConductance private (val value: Double, val unit: ElectricalConductanceUnit)
   extends Quantity[ElectricalConductance] {

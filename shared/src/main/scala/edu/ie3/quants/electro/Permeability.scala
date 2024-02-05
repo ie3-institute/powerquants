@@ -20,7 +20,7 @@ import edu.ie3.quants.motion.Newtons
  * @author  cquiroz
  * @since   1.4
  *
- * @param value value in [[squants.electro.HenriesPerMeter]]
+ * @param value value in [[edu.ie3.quants.electro.HenriesPerMeter]]
  */
 final class Permeability private (val value: Double, val unit: PermeabilityUnit)
   extends Quantity[Permeability] {

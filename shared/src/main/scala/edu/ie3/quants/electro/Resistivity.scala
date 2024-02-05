@@ -15,7 +15,7 @@ import edu.ie3.quants._
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.OhmMeters]]
+ * @param value value in [[edu.ie3.quants.electro.OhmMeters]]
  */
 final class Resistivity private (val value: Double, val unit: ResistivityUnit)
   extends Quantity[Resistivity] {

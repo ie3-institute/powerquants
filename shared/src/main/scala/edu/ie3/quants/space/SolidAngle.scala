@@ -18,7 +18,7 @@ import edu.ie3.quants.radio.RadiantIntensity
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.space.SquaredRadians]]
+ * @param value value in [[edu.ie3.quants.space.SquaredRadians]]
  */
 final class SolidAngle private (val value: Double, val unit: SolidAngleUnit)
   extends Quantity[SolidAngle] {

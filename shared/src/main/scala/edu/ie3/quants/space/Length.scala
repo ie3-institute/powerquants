@@ -117,7 +117,7 @@ object Length extends Dimension[Length] with BaseDimension {
 }
 
 /**
- * Base trait for units of [[squants.space.Length]]
+ * Base trait for units of [[edu.ie3.quants.space.Length]]
  */
 trait LengthUnit extends UnitOfMeasure[Length] with UnitConverter {
   def apply[A](n: A)(implicit num: Numeric[A]) = Length(n, this)

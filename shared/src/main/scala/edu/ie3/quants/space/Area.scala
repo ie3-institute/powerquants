@@ -22,7 +22,7 @@ import edu.ie3.quants.time.Time
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.space.SquareMeters]]
+ * @param value value in [[edu.ie3.quants.space.SquareMeters]]
  */
 final class Area private (val value: Double, val unit: AreaUnit)
   extends Quantity[Area] {

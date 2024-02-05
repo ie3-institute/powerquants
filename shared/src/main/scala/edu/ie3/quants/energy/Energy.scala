@@ -24,7 +24,7 @@ import edu.ie3.quants.radio.{ Irradiance, ParticleFlux, WattsPerSquareMeter }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.energy.WattHours]]
+ * @param value value in [[edu.ie3.quants.energy.WattHours]]
  */
 final class Energy private (val value: Double, val unit: EnergyUnit)
   extends Quantity[Energy]
@@ -95,7 +95,7 @@ final class Energy private (val value: Double, val unit: EnergyUnit)
 }
 
 /**
- * Companion object for [[squants.energy.Energy]]
+ * Companion object for [[edu.ie3.quants.energy.Energy]]
  */
 object Energy extends Dimension[Energy] {
   private[energy] def apply[A](n: A, unit: EnergyUnit)(implicit num: Numeric[A]) = new Energy(num.toDouble(n), unit)
@@ -114,7 +114,7 @@ object Energy extends Dimension[Energy] {
 }
 
 /**
- * Base trait for units of [[squants.energy.Energy]]
+ * Base trait for units of [[edu.ie3.quants.energy.Energy]]
  */
 trait EnergyUnit extends UnitOfMeasure[Energy] with UnitConverter {
   def apply[A](n: A)(implicit num: Numeric[A]) = Energy(n, this)

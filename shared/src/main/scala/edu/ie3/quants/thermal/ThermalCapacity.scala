@@ -20,7 +20,7 @@ import edu.ie3.quants.energy.{ Energy, Joules }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value the value in [[squants.thermal.JoulesPerKelvin]]
+ * @param value the value in [[edu.ie3.quants.thermal.JoulesPerKelvin]]
  */
 final class ThermalCapacity private (val value: Double, val unit: ThermalCapacityUnit)
   extends Quantity[ThermalCapacity] {

@@ -19,7 +19,7 @@ import edu.ie3.quants.time.{ Seconds, TimeDerivative }
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value the amount of charge in [[squants.electro.Amperes]]'s
+ * @param value the amount of charge in [[edu.ie3.quants.electro.Amperes]]'s
  */
 final class ElectricCurrent private (val value: Double, val unit: ElectricCurrentUnit)
   extends Quantity[ElectricCurrent]
@@ -52,7 +52,7 @@ object ElectricCurrent extends Dimension[ElectricCurrent] with BaseDimension {
 }
 
 /**
- * Base trait for units of [[squants.electro.ElectricCurrent]]
+ * Base trait for units of [[edu.ie3.quants.electro.ElectricCurrent]]
  */
 trait ElectricCurrentUnit extends UnitOfMeasure[ElectricCurrent] with UnitConverter {
   def apply[A](n: A)(implicit num: Numeric[A]) = ElectricCurrent(n, this)

@@ -16,7 +16,7 @@ import edu.ie3.quants.space.Length
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.SiemensPerMeter]]
+ * @param value value in [[edu.ie3.quants.electro.SiemensPerMeter]]
  */
 final class Conductivity private (val value: Double, val unit: ConductivityUnit)
   extends Quantity[Conductivity] {

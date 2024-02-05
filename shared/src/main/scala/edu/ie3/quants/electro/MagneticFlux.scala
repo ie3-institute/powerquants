@@ -17,7 +17,7 @@ import edu.ie3.quants.time.TimeIntegral
  * @author  garyKeorkunian
  * @since   0.1
  *
- * @param value value in [[squants.electro.Webers]]
+ * @param value value in [[edu.ie3.quants.electro.Webers]]
  */
 final class MagneticFlux private (val value: Double, val unit: MagneticFluxUnit)
   extends Quantity[MagneticFlux]
