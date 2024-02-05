@@ -113,8 +113,8 @@ Squants helps prevent errors like these by type checking operations at compile t
 automatically applying scale and type conversions at run-time.  For example:
 
 ```scala
-scala> import squants.energy.{Kilowatts, Megawatts, Power}
-import squants.energy.{Kilowatts, Megawatts, Power}
+scala> import edu.ie3.quants.energy.{Kilowatts, Megawatts, Power}
+import edu.ie3.quants.energy.{Kilowatts, Megawatts, Power}
 
 scala> val load1: Power = Kilowatts(12)
 load1: squants.energy.Power = 12.0 kW
@@ -137,8 +137,8 @@ different and the library applies an appropriate conversion.  Also, notice that 
 the scale within the value name is no longer needed:
 
 ```scala
-scala> import squants.energy.{Energy, Power, Kilowatts, KilowattHours}
-import squants.energy.{Energy, Power, Kilowatts, KilowattHours}
+scala> import edu.ie3.quants.energy.{Energy, Power, Kilowatts, KilowattHours}
+import edu.ie3.quants.energy.{Energy, Power, Kilowatts, KilowattHours}
 
 scala> val load: Power = Kilowatts(1.2)
 load: squants.energy.Power = 1.2 kW
@@ -167,8 +167,8 @@ Conversions are implemented by defining relationships between Quantity types usi
 
 Code samples in this section assume these imports:
 ```scala
-import squants.energy.{Kilowatts, Power}
-import squants.time.{Hours, Days}
+import edu.ie3.quants.energy.{Kilowatts, Power}
+import edu.ie3.quants.time.{Hours, Days}
 ```
 
 The following code demonstrates creating ratio between two quantities of the same dimension,
@@ -204,11 +204,11 @@ aveLoad: squants.energy.Power = 1200.0 W
 Code samples in this section assume these imports:
 ```scala
 import scala.language.postfixOps
-import squants.energy.{Gigawatts, Kilowatts, Power, Megawatts}
-import squants.mass.MassConversions._
-import squants.mass.{Kilograms, Pounds}
-import squants.thermal.TemperatureConversions._
-import squants.thermal.Fahrenheit
+import edu.ie3.quants.energy.{Gigawatts, Kilowatts, Power, Megawatts}
+import edu.ie3.quants.mass.MassConversions._
+import edu.ie3.quants.mass.{Kilograms, Pounds}
+import edu.ie3.quants.thermal.TemperatureConversions._
+import edu.ie3.quants.thermal.Fahrenheit
 ```
 
 Quantity values are based in the units used to create them.
@@ -333,8 +333,8 @@ res4: Double = 212.0
 Apply a `Double => Double` operation to the underlying value of a quantity, while preserving its type and unit.
 
 ```scala
-scala> import squants.energy.Kilowatts
-import squants.energy.Kilowatts
+scala> import edu.ie3.quants.energy.Kilowatts
+import edu.ie3.quants.energy.Kilowatts
 
 scala> val load = Kilowatts(2.0)
 load: squants.energy.Power = 2.0 kW
@@ -352,8 +352,8 @@ Create an implicit Quantity value to be used as a tolerance in approximations.
 Then use the `approx` method (or `=~`, `~=`, `≈` operators) like you would use the `equals` method (`==` operator).
 
 ```scala
-scala> import squants.energy.{Kilowatts, Watts}
-import squants.energy.{Kilowatts, Watts}
+scala> import edu.ie3.quants.energy.{Kilowatts, Watts}
+import edu.ie3.quants.energy.{Kilowatts, Watts}
 
 scala> val load = Kilowatts(2.0)
 load: squants.energy.Power = 2.0 kW
@@ -395,14 +395,14 @@ The dimensionality of the vector is determined by the number of arguments.
 Most basic vector operations are currently supported (addition, subtraction, scaling, cross and dot products)
 
 ```scala
-scala> import squants.{QuantityVector, SVector}
-import squants.{QuantityVector, SVector}
+scala> import edu.ie3.quants.{QuantityVector, SVector}
+import edu.ie3.quants.{QuantityVector, SVector}
 
-scala> import squants.space.{Kilometers, Length}
-import squants.space.{Kilometers, Length}
+scala> import edu.ie3.quants.space.{Kilometers, Length}
+import edu.ie3.quants.space.{Kilometers, Length}
 
-scala> import squants.space.LengthConversions._
-import squants.space.LengthConversions._
+scala> import edu.ie3.quants.space.LengthConversions._
+import edu.ie3.quants.space.LengthConversions._
 
 scala> val vector: QuantityVector[Length] = SVector(Kilometers(1.2), Kilometers(4.3), Kilometers(2.3))
 vector: squants.QuantityVector[squants.space.Length] = QuantityVector(WrappedArray(1.2 km, 4.3 km, 2.3 km))
@@ -441,7 +441,7 @@ crossProduct: vector.SVectorType = QuantityVector(WrappedArray(0.0 km, 1.1368683
 Simple non-quantity (Double based) vectors are also supported.
 
 ```scala
-import squants.DoubleVector
+import edu.ie3.quants.DoubleVector
 
 val vector: DoubleVector = SVector(1.2, 4.3, 2.3, 5.4)   // a Four-dimensional vector
 ```
@@ -451,17 +451,17 @@ val vector: DoubleVector = SVector(1.2, 4.3, 2.3, 5.4)   // a Four-dimensional v
 Currently dimensional conversions are supported by using the slightly verbose, but flexible map method.
 
 ```scala
-scala> import squants.{DoubleVector, QuantityVector}
-import squants.{DoubleVector, QuantityVector}
+scala> import edu.ie3.quants.{DoubleVector, QuantityVector}
+import edu.ie3.quants.{DoubleVector, QuantityVector}
 
-scala> import squants.motion.Velocity
-import squants.motion.Velocity
+scala> import edu.ie3.quants.motion.Velocity
+import edu.ie3.quants.motion.Velocity
 
-scala> import squants.space.{Area, Kilometers, Length, Meters}
-import squants.space.{Area, Kilometers, Length, Meters}
+scala> import edu.ie3.quants.space.{Area, Kilometers, Length, Meters}
+import edu.ie3.quants.space.{Area, Kilometers, Length, Meters}
 
-scala> import squants.time.Seconds
-import squants.time.Seconds
+scala> import edu.ie3.quants.time.Seconds
+import edu.ie3.quants.time.Seconds
 
 scala> val vectorLength = QuantityVector(Kilometers(1.2), Kilometers(4.3), Kilometers(2.3))
 vectorLength: squants.QuantityVector[squants.space.Length] = QuantityVector(WrappedArray(1.2 km, 4.3 km, 2.3 km))
@@ -503,8 +503,8 @@ A Quantity of purchasing power measured in Currency units.
 Like other quantities, the Unit of Measures are used to create Money values.
 
 ```scala
-scala> import squants.market.{BTC, JPY, USD, XAU}
-import squants.market.{BTC, JPY, USD, XAU}
+scala> import edu.ie3.quants.market.{BTC, JPY, USD, XAU}
+import edu.ie3.quants.market.{BTC, JPY, USD, XAU}
 
 scala> val tenBucks = USD(10)      // Money: 10 USD
 tenBucks: squants.market.Money = 1E+1 USD
@@ -527,10 +527,10 @@ A Price value is typed on a Quantity and can be denominated in any defined Curre
 
 Assuming these imports:
 ```scala
-import squants.{Dozen, Each}
-import squants.energy.MegawattHours
-import squants.market.USD
-import squants.space.UsGallons
+import edu.ie3.quants.{Dozen, Each}
+import edu.ie3.quants.energy.MegawattHours
+import edu.ie3.quants.market.USD
+import edu.ie3.quants.space.UsGallons
 ```
 
 You can compute the following:
@@ -570,8 +570,8 @@ s: String = $123.46
 Currency Exchange Rates are used to define the conversion factors between currencies
 
 ```scala
-scala> import squants.market.{CurrencyExchangeRate, JPY, Money, USD}
-import squants.market.{CurrencyExchangeRate, JPY, Money, USD}
+scala> import edu.ie3.quants.market.{CurrencyExchangeRate, JPY, Money, USD}
+import edu.ie3.quants.market.{CurrencyExchangeRate, JPY, Money, USD}
 
 scala> // create an exchange rate
      | val rate1 = CurrencyExchangeRate(USD(1), JPY(100))
@@ -623,9 +623,9 @@ The technique and frequency chosen for exchange rate updates is completely in co
 
 Assuming these imports:
 ```scala
-import squants.energy.MegawattHours
-import squants.market.{CAD, JPY, MXN, USD}
-import squants.market.defaultMoneyContext
+import edu.ie3.quants.energy.MegawattHours
+import edu.ie3.quants.market.{CAD, JPY, MXN, USD}
+import edu.ie3.quants.market.defaultMoneyContext
 ```
 
 You can compute:
@@ -659,8 +659,8 @@ northAmericanSales: squants.market.Money = 635.1047619047619047619047619047619 U
 A `QuantityRange` is used to represent a range of Quantity values between an upper and lower bound:
 
 ```scala
-import squants.QuantityRange
-import squants.energy.{Kilowatts, Megawatts, Power}
+import edu.ie3.quants.QuantityRange
+import edu.ie3.quants.energy.{Kilowatts, Megawatts, Power}
 ```
 ```scala
 val load1: Power = Kilowatts(1000)
@@ -678,8 +678,8 @@ val range: QuantityRange[Power] = QuantityRange(load1, load2)
 The `QuantityRange` constructor requires that `upper` is strictly greater than `lower`:
 
 ```scala
-import squants.space.LengthConversions._
-// import squants.space.LengthConversions._
+import edu.ie3.quants.space.LengthConversions._
+// import edu.ie3.quants.space.LengthConversions._
 
 // this will work b/c upper > lower
 QuantityRange(1.km, 5.km)
@@ -777,9 +777,9 @@ more naturally expressive and readable way.
 
 Code samples in this section assume these imports
 ```scala
-import squants.energy.{Kilowatts, MegawattHours, Power}
-import squants.market.{Price, USD}
-import squants.time.Hours
+import edu.ie3.quants.energy.{Kilowatts, MegawattHours, Power}
+import edu.ie3.quants.market.{Price, USD}
+import edu.ie3.quants.time.Hours
 ```
 
 Create Quantities using Unit Of Measure Factory objects (no implicits required):
@@ -802,12 +802,12 @@ Create Quantities using Unit of Measure names and/or symbols (uses implicits):
 
 ```scala
 import scala.language.postfixOps
-import squants.energy.EnergyConversions._
-import squants.energy.PowerConversions._
-import squants.information.InformationConversions._
-import squants.market.MoneyConversions._
-import squants.space.LengthConversions._
-import squants.time.TimeConversions._
+import edu.ie3.quants.energy.EnergyConversions._
+import edu.ie3.quants.energy.PowerConversions._
+import edu.ie3.quants.information.InformationConversions._
+import edu.ie3.quants.market.MoneyConversions._
+import edu.ie3.quants.space.LengthConversions._
+import edu.ie3.quants.time.TimeConversions._
 ```
 ```scala
 scala> val load1 = 100 kW 			        // Simple expressions don’t need dots
@@ -894,11 +894,11 @@ Most Quantities that support implicit conversions also include an implicit Numer
 to your code where Numeric support is required.  These follow the following pattern:
 
 ```scala
-scala> import squants.mass.{Grams, Kilograms}
-import squants.mass.{Grams, Kilograms}
+scala> import edu.ie3.quants.mass.{Grams, Kilograms}
+import edu.ie3.quants.mass.{Grams, Kilograms}
 
-scala> import squants.mass.MassConversions.MassNumeric
-import squants.mass.MassConversions.MassNumeric
+scala> import edu.ie3.quants.mass.MassConversions.MassNumeric
+import edu.ie3.quants.mass.MassConversions.MassNumeric
 
 scala> val sum = List(Kilograms(100), Grams(34510)).sum
 sum: squants.mass.Mass = 134510.0 g
@@ -917,9 +917,9 @@ in a few important ways.
 The following code provides a basic example for creating a MoneyNumeric:
 
 ```scala
-import squants.market.defaultMoneyContext
-import squants.market.MoneyConversions._
-import squants.market.USD
+import edu.ie3.quants.market.defaultMoneyContext
+import edu.ie3.quants.market.MoneyConversions._
+import edu.ie3.quants.market.USD
 implicit val moneyContext = defaultMoneyContext
 ```
 
@@ -950,17 +950,17 @@ SI, such as litre, hectare, hour, minute, etc). See the linked document for a de
 To summon the strict SI `UnitGroup` for `Length`, you would use this code:
 
 ```scala
-import squants.space.Length
-// import squants.space.Length
+import edu.ie3.quants.space.Length
+// import edu.ie3.quants.space.Length
 
-import squants.experimental.unitgroups.ImplicitDimensions.space._
-// import squants.experimental.unitgroups.ImplicitDimensions.space._
+import edu.ie3.quants.experimental.unitgroups.ImplicitDimensions.space._
+// import edu.ie3.quants.experimental.unitgroups.ImplicitDimensions.space._
 
-import squants.experimental.unitgroups.UnitGroup
-// import squants.experimental.unitgroups.UnitGroup
+import edu.ie3.quants.experimental.unitgroups.UnitGroup
+// import edu.ie3.quants.experimental.unitgroups.UnitGroup
 
-import squants.experimental.unitgroups.si.strict.implicits._
-// import squants.experimental.unitgroups.si.strict.implicits._
+import edu.ie3.quants.experimental.unitgroups.si.strict.implicits._
+// import edu.ie3.quants.experimental.unitgroups.si.strict.implicits._
 
 val siLengths: UnitGroup[Length] = implicitly[UnitGroup[Length]]
 // siLengths: squants.experimental.unitgroups.UnitGroup[squants.space.Length] = squants.experimental.unitgroups.si.strict.package$implicits$$anon$1@f52ca1b
@@ -969,8 +969,8 @@ val siLengths: UnitGroup[Length] = implicitly[UnitGroup[Length]]
 To print out units and their conversion factors to the primary SI unit, you could use this code:
 
 ```scala
-import squants.{Quantity, UnitOfMeasure}
-// import squants.{Quantity, UnitOfMeasure}
+import edu.ie3.quants.{Quantity, UnitOfMeasure}
+// import edu.ie3.quants.{Quantity, UnitOfMeasure}
 
 def mkConversionFactor[A <: Quantity[A]](uom: UnitOfMeasure[A]): Double = {
   val one = uom(1)
@@ -1007,14 +1007,14 @@ Other `UnitGroup` definitions don't use implicits. For example, `squants.experim
 To create an ad-hoc `UnitGroup` just implement the trait. For example, to make a US cooking measure `UnitGroup`:
 
 ```scala
-import squants.{Quantity, Dimension}
-// import squants.{Quantity, Dimension}
+import edu.ie3.quants.{Quantity, Dimension}
+// import edu.ie3.quants.{Quantity, Dimension}
 
-import squants.space._
-// import squants.space._
+import edu.ie3.quants.space._
+// import edu.ie3.quants.space._
 
-import squants.experimental.unitgroups.UnitGroup
-// import squants.experimental.unitgroups.UnitGroup
+import edu.ie3.quants.experimental.unitgroups.UnitGroup
+// import edu.ie3.quants.experimental.unitgroups.UnitGroup
 
 val usCookingUnitGroup = new UnitGroup[Volume] {
   // units don't have to be specified in-order.
@@ -1058,8 +1058,8 @@ work for most use-cases, but users can create their own `Formatters` if they hav
 To use `DefaultFormatter` import it, and a unit group:
 
 ```scala
-import squants.experimental.formatter.DefaultFormatter
-import squants.experimental.unitgroups.misc.AstronomicalLengthUnitGroup
+import edu.ie3.quants.experimental.formatter.DefaultFormatter
+import edu.ie3.quants.experimental.unitgroups.misc.AstronomicalLengthUnitGroup
 ```
 
 Then create the formatter by passing in a unit group:
@@ -1071,8 +1071,8 @@ val astroFormatter = new DefaultFormatter(AstronomicalLengthUnitGroup)
 Now, we create some values using human-unfriendly numbers:
 
 ```scala
-import squants.space.LengthConversions._
-// import squants.space.LengthConversions._
+import edu.ie3.quants.space.LengthConversions._
+// import edu.ie3.quants.space.LengthConversions._
 
 val earthToJupiter = 588000000.km
 // earthToJupiter: squants.space.Length = 588000000.0 km
@@ -1107,12 +1107,12 @@ Then, for each `Dimension` you wish to use, place a Formatter for the Dimension 
 we're adding support for `Length`.
 
 ```scala
-import squants.experimental.formatter.DefaultFormatter
-import squants.experimental.formatter.syntax._
-import squants.mass.MassConversions._
-import squants.space.Length
-import squants.space.LengthConversions._
-import squants.experimental.unitgroups.misc.AstronomicalLengthUnitGroup
+import edu.ie3.quants.experimental.formatter.DefaultFormatter
+import edu.ie3.quants.experimental.formatter.syntax._
+import edu.ie3.quants.mass.MassConversions._
+import edu.ie3.quants.space.Length
+import edu.ie3.quants.space.LengthConversions._
+import edu.ie3.quants.experimental.unitgroups.misc.AstronomicalLengthUnitGroup
 ```
 
 ```scala
@@ -1155,26 +1155,26 @@ imports.
 
 First, import the SI unit groups and their implicits:
 ```scala
-import squants.experimental.unitgroups.ImplicitDimensions.space._
-import squants.experimental.unitgroups.si.strict.implicits._
+import edu.ie3.quants.experimental.unitgroups.ImplicitDimensions.space._
+import edu.ie3.quants.experimental.unitgroups.si.strict.implicits._
 ```
 
 Next, import the formatter syntax described above:
 
 ```scala
-import squants.experimental.formatter.syntax._
+import edu.ie3.quants.experimental.formatter.syntax._
 ```
 
 Finally, add imports for implicitly deriving formatters:
 ```scala
-scala> import squants.experimental.formatter.implicits._
-import squants.experimental.formatter.implicits._
+scala> import edu.ie3.quants.experimental.formatter.implicits._
+import edu.ie3.quants.experimental.formatter.implicits._
 ```
 
 Now we can create quantities and format them by calling `.inBestUnit` directly:
 
 ```scala
-import squants.space.LengthConversions._
+import edu.ie3.quants.space.LengthConversions._
 ```
 
 ```scala
@@ -1254,12 +1254,12 @@ These traits provide operations with time operands which result in correct dimen
 
 Using these imports:
 ```scala
-import squants.energy.Kilowatts
-import squants.motion.{Acceleration, Velocity}
-import squants.space.{Kilometers, Length}
-import squants.space.LengthConversions._
-import squants.time.{Hours, Seconds, Time}
-import squants.time.TimeConversions._
+import edu.ie3.quants.energy.Kilowatts
+import edu.ie3.quants.motion.{Acceleration, Velocity}
+import edu.ie3.quants.space.{Kilometers, Length}
+import edu.ie3.quants.space.LengthConversions._
+import edu.ie3.quants.time.{Hours, Seconds, Time}
+import edu.ie3.quants.time.TimeConversions._
 ```
 
 You can code the following:
@@ -1304,20 +1304,20 @@ that perform dimensional analysis.
 
 This code samples in this section use these imports:
 ```scala
-import squants.energy.Energy
-import squants.energy.EnergyConversions._
-import squants.energy.PowerConversions._
-import squants.market.{Money, Price}
-import squants.market.MoneyConversions._
-import squants.market.defaultMoneyContext
-import squants.mass.{Density, Mass}
-import squants.mass.MassConversions._
-import squants.motion.{Acceleration, Velocity, VolumeFlow}
-import squants.motion.AccelerationConversions._
-import squants.space.LengthConversions._
-import squants.space.VolumeConversions._
-import squants.time.Time
-import squants.time.TimeConversions._
+import edu.ie3.quants.energy.Energy
+import edu.ie3.quants.energy.EnergyConversions._
+import edu.ie3.quants.energy.PowerConversions._
+import edu.ie3.quants.market.{Money, Price}
+import edu.ie3.quants.market.MoneyConversions._
+import edu.ie3.quants.market.defaultMoneyContext
+import edu.ie3.quants.mass.{Density, Mass}
+import edu.ie3.quants.mass.MassConversions._
+import edu.ie3.quants.motion.{Acceleration, Velocity, VolumeFlow}
+import edu.ie3.quants.motion.AccelerationConversions._
+import edu.ie3.quants.space.LengthConversions._
+import edu.ie3.quants.space.VolumeConversions._
+import edu.ie3.quants.time.Time
+import edu.ie3.quants.time.TimeConversions._
 ```
 
 ```scala
@@ -1362,14 +1362,14 @@ Code samples in this section use these imports:
 ```scala
 import scala.language.postfixOps
 
-import squants.energy.{Energy, Power, PowerRamp}
-import squants.energy.EnergyConversions._
-import squants.energy.PowerConversions._
-import squants.energy.PowerRampConversions._
-import squants.market.Price
-import squants.market.MoneyConversions._
-import squants.time.Time
-import squants.time.TimeConversions._
+import edu.ie3.quants.energy.{Energy, Power, PowerRamp}
+import edu.ie3.quants.energy.EnergyConversions._
+import edu.ie3.quants.energy.PowerConversions._
+import edu.ie3.quants.energy.PowerRampConversions._
+import edu.ie3.quants.market.Price
+import edu.ie3.quants.market.MoneyConversions._
+import edu.ie3.quants.time.Time
+import edu.ie3.quants.time.TimeConversions._
 ```
 
 This is OK ...
@@ -1421,8 +1421,8 @@ class ScadaServiceAnticorruption(val service: ScadaService) {
 Implement the ACL as a trait and mix in to the application's services where needed.
 
 ```scala
-import squants.radio.{Irradiance, WattsPerSquareMeter}
-import squants.thermal.{Celsius, Temperature}
+import edu.ie3.quants.radio.{Irradiance, WattsPerSquareMeter}
+import edu.ie3.quants.thermal.{Celsius, Temperature}
 
 trait WeatherServiceAntiCorruption {
   val service: WeatherService

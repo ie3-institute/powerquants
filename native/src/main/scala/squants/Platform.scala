@@ -1,4 +1,4 @@
-package squants
+package edu.ie3.quants
 
 object Platform {
   /**

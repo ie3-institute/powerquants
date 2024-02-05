@@ -6,11 +6,11 @@
 **                                                                      **
 \*                                                                      */
 
-import squants.market.MoneyConversions._
-import squants.motion.{ GallonsPerDay, VolumeFlow }
-import squants.space.UsGallons
-import squants.space.VolumeConversions._
-import squants.time.TimeConversions._
+import edu.ie3.quants.market.MoneyConversions._
+import edu.ie3.quants.motion.{ GallonsPerDay, VolumeFlow }
+import edu.ie3.quants.space.UsGallons
+import edu.ie3.quants.space.VolumeConversions._
+import edu.ie3.quants.time.TimeConversions._
 
 case class Brady(name: String, milkConsumption: VolumeFlow)
 

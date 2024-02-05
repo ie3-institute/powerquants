@@ -29,7 +29,7 @@ object Resolvers {
 
 object Project {
   val defaultSettings = Seq(
-    name := "Squants",
+    name := "powerquants",
 
     autoAPIMappings := true,
 
@@ -39,7 +39,7 @@ object Project {
         Resolvers.sonatypeNexusStaging
     ),
 
-    OsgiKeys.exportPackage := Seq("squants.*"),
+    OsgiKeys.exportPackage := Seq("edu.ie3.quants.*"),
 
     OsgiKeys.privatePackage := Seq() // No private packages
   )
