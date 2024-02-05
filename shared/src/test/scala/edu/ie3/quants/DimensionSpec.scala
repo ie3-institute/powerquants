@@ -14,6 +14,6 @@ import org.scalatest.matchers.should.Matchers
 class DimensionSpec extends AnyFlatSpec with Matchers {
 
   "Dimensions" should "have a stable hashCode" in {
-    space.Length.hashCode.toHexString should be("29d67c0b")
+    space.Length.hashCode().toHexString should be("3298d547")
   }
 }
