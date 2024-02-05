@@ -1,9 +1,9 @@
 
-import squants.market.MoneyConversions._
-import squants.market._
-import squants.mass.MassConversions._
-import squants.mass.Pounds
-import squants.time.TimeConversions._
+import edu.ie3.quants.market.MoneyConversions._
+import edu.ie3.quants.market._
+import edu.ie3.quants.mass.MassConversions._
+import edu.ie3.quants.mass.Pounds
+import edu.ie3.quants.time.TimeConversions._
 
 implicit val moneyContext =
   MoneyContext(

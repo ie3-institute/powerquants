@@ -1,6 +1,6 @@
-package squants.experimental
+package edu.ie3.quants.experimental
 
-import squants.experimental.SquantsNumeric.{DoubleIsSquantsNumeric, FloatIsSquantsNumeric}
+import edu.ie3.quants.experimental.SquantsNumeric.{DoubleIsSquantsNumeric, FloatIsSquantsNumeric}
 
 trait ScalaVersionSpecificNumericInstances {
 
